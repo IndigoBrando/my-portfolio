@@ -37,13 +37,11 @@ const projectData = {
   },
 };
 
-export function generateStaticParams() {
-  return Object.keys(projectData).map((slug) => ({ slug }));
-}
-
-type Slug = keyof typeof projectData;
-
-export default function ProjectPage({ params }: { params: { slug: Slug } }) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: { slug: keyof typeof projectData };
+}) {
   const project = projectData[params.slug];
   if (!project) return notFound();
 
