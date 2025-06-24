@@ -1,8 +1,10 @@
-// /app/projects/[slug]/page.tsx
+// ✅ Ensure it's a server component
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { notFound } from 'next/navigation';
 import ProjectClient from './ProjectClient';
+
+export const dynamic = 'error'; // Ensure static generation only
 
 const projectData = {
   konsultap: {
@@ -35,17 +37,16 @@ const projectData = {
   },
 };
 
-// 👇 Important for static export builds (like GitHub Pages)
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return Object.keys(projectData).map((slug) => ({ slug }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-const slug = params.slug;
-if (!Object.keys(projectData).includes(slug)) return notFound();
-const project = projectData[slug as keyof typeof projectData];
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: keyof typeof projectData };
+}) {
+  const project = projectData[params.slug];
   if (!project) return notFound();
 
   return (
