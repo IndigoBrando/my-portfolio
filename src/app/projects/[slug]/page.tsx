@@ -39,20 +39,20 @@ const projectData: Record<string, {
       '/images/vts/6.png',
       '/images/vts/7.png',
       '/images/vts/8.png'
-      
+
     ],
   },
 };
 
 
 export default function ProjectDetails() {
- const params = useParams();
-const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
+  const params = useParams();
+  const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
 
-if (!slug || !(slug in projectData)) return notFound();
+  if (!slug || !(slug in projectData)) return notFound();
 
-const project = slug ? projectData[slug] : null;
-const [currentImage, setCurrentImage] = useState(0);
+  const project = slug ? projectData[slug] : null;
+  const [currentImage, setCurrentImage] = useState(0);
 
 
   if (!project) return notFound();
@@ -77,26 +77,27 @@ const [currentImage, setCurrentImage] = useState(0);
         </p>
 
         {/* Slideshow */}
-        <div className="relative w-full h-150 mb-8 border border-green-700 rounded-lg overflow-hidden">
+        <div className="relative w-full max-w-5xl h-[80vh] mx-auto mb-8 border border-green-700 rounded-lg bg-black overflow-hidden">
           <Image
             src={project.images[currentImage]}
             alt={`${project.title} screenshot`}
             fill
-            className="object-cover glitch-img"
+            className="object-contain"
           />
           <button
             onClick={prevImage}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-green-900 bg-opacity-50 text-green-300 px-4 py-2"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-green-900 bg-opacity-50 text-green-300 px-4 py-2 z-10"
           >
             &#8592;
           </button>
           <button
             onClick={nextImage}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-green-900 bg-opacity-50 text-green-300 px-4 py-2"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-green-900 bg-opacity-50 text-green-300 px-4 py-2 z-10"
           >
             &#8594;
           </button>
         </div>
+
       </section>
       <Footer />
     </main>

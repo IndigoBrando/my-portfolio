@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { Typewriter } from 'react-simple-typewriter';
+import { motion } from 'framer-motion';
+
+
 
 export default function Home() {
   return (
@@ -11,11 +15,29 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-4">
-       
-        <h1 className="text-4xl md:text-5xl font-bold">Hi, I&apos;m Christian</h1>
-        <p className="mt-4 text-lg md:text-xl max-w-xl">
+
+        <h1 className="text-4xl md:text-5xl font-bold text-green-400">
+          Hi,&nbsp;
+          <span className="text-green-300">
+            <Typewriter
+              words={["I'm Christian"]}
+              loop={1}
+              cursor
+              cursorStyle="_"
+              typeSpeed={80}
+              deleteSpeed={0}
+              delaySpeed={1500}
+            />
+          </span>
+        </h1>
+        <motion.p
+          className="mt-4 text-lg md:text-xl max-w-xl text-green-300"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
           A passionate developer exploring the full-stack world. I love building digital experiences with code.
-        </p>
+        </motion.p>
       </section>
 
       {/* Tagline Section */}

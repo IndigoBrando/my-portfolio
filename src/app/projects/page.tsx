@@ -9,7 +9,7 @@ export default function ProjectsPage() {
       title: 'Konsultap',
       description:
         'A full-stack healthcare scheduling and video consultation platform built with PHP, MySQL, Agora, and PHPMailer.',
-        link: '/projects/konsultap',
+      link: '/projects/konsultap',
     },
     {
       title: 'Portfolio Website',
@@ -26,9 +26,9 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <main className="bg-black text-green-400 min-h-screen font-mono">
+    <main className="bg-black text-green-400 min-h-screen font-mono flex flex-col">
       <Header />
-      <section className="px-6 py-20 max-w-6xl mx-auto">
+      <section className="px-6 py-20 max-w-6xl mx-auto flex-grow">
         <h1 className="text-4xl md:text-5xl font-bold mb-10 text-center">
           Projects
         </h1>
@@ -40,5 +40,6 @@ export default function ProjectsPage() {
       </section>
       <Footer />
     </main>
+
   );
 }
