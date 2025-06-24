@@ -51,7 +51,7 @@ const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
 
 if (!slug || !(slug in projectData)) return notFound();
 
-const project = projectData[slug];
+const project = slug ? projectData[slug] : null;
 const [currentImage, setCurrentImage] = useState(0);
 
 
