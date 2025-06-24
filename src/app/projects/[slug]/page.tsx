@@ -38,19 +38,15 @@ const projectData = {
 };
 
 
-export function generateStaticParams() {
-  return Object.keys(projectData).map((slug) => ({ slug }));
+interface ProjectPageProps {
+  params: { slug: string };
 }
 
-export default function ProjectPage({
-  params,
-}: {
-  params: { slug: keyof typeof projectData };
-}) {
-  const project = projectData[params.slug];
-
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const project = projectData[params.slug as keyof typeof projectData];
   if (!project) return notFound();
   
+
   return (
     <main className="bg-black text-green-400 min-h-screen font-mono">
       <Header />
