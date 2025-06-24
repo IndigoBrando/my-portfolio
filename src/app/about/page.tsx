@@ -25,7 +25,7 @@ export default function AboutPage() {
         </div>
 
         <p className="text-lg leading-relaxed mb-6">
-          I&apos;m <span className="text-green-300 font-bold">Christian Malimit</span>, a graduating student in July 16 2025 passionate about full-stack development,
+          I&apos;m <span className="text-green-300 font-bold">Christian Malimit</span>, a graduating student with a degree of Bachelors of Science in Information Technology in July 16 2025 passionate about full-stack development,
           systems design, and building digital tools that empower people. I enjoy blending clean code with a sense of style — often in dark mode.
         </p>
 
