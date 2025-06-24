@@ -37,14 +37,20 @@ const projectData = {
   },
 };
 
-export default async function ProjectPage({
+
+export function generateStaticParams() {
+  return Object.keys(projectData).map((slug) => ({ slug }));
+}
+
+export default function ProjectPage({
   params,
 }: {
   params: { slug: keyof typeof projectData };
 }) {
   const project = projectData[params.slug];
-  if (!project) return notFound();
 
+  if (!project) return notFound();
+  
   return (
     <main className="bg-black text-green-400 min-h-screen font-mono">
       <Header />
