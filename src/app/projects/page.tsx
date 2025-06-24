@@ -23,6 +23,12 @@ export default function ProjectsPage() {
         'A Reservation website that streamlines the process of car request from DENR MIMAROPA',
       link: '/projects/vehicle'
     },
+     {
+      title: 'Slipnote',
+      description:
+        'A notepad mobile application that hovers like messenger bubble with the ability to take notes',
+      link: '/projects/slipnote'
+    },
   ];
 
   return (

@@ -42,6 +42,23 @@ const projectData: Record<string, {
 
     ],
   },
+
+  slipnote: {
+    title: 'Slipnote: A notepad hovering over applications',
+    description:
+      'A notepad mobile application that hovers like messenger bubble with the ability to take notes',
+    images: [
+      '/images/note/1.png',
+      '/images/note/2.png',
+      '/images/note/3.png',
+      '/images/note/4.png',
+      '/images/note/5.png',
+     
+
+    ],
+  },
+
+
 };
 
 
