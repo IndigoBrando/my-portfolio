@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-4">
        
-        <h1 className="text-4xl md:text-5xl font-bold">Hi, I'm Christian</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">Hi, I&apos;m Christian</h1>
         <p className="mt-4 text-lg md:text-xl max-w-xl">
           A passionate developer exploring the full-stack world. I love building digital experiences with code.
         </p>
@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Tagline Section */}
       <section className="text-center px-4 py-6">
-        <p className="italic text-green-300 text-lg">"Turning caffeine into scalable code."</p>
+        <p className="italic text-green-300 text-lg">&quot;Turning caffeine into scalable code.&quot;</p>
       </section>
 
       {/* Tech Stack */}
