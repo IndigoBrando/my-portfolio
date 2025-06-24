@@ -29,10 +29,10 @@ export default function AboutPage() {
           systems design, and building digital tools that empower people. I enjoy blending clean code with a sense of style — often in dark mode.
         </p>
 
-        <p className="text-lg leading-relaxed mb-6">
+       <p className="text-lg leading-relaxed mb-6">
           During college, I led technical teams, created healthcare platforms like <strong>Konsultap</strong>, and developed custom tools
-          for online scheduling and telemedicine. My work often bridges functionality and creativity — the kind that leaves a lasting impression.
-        </p>
+          for online scheduling and telemedicine. I also served as the Public Relations Officer (PRO) of the Adamson University Guild of Animation Makers and Esports, and as Head of Technical for the Adamson IT and IS Society. My work often bridges functionality and creativity — the kind that leaves a lasting impression.
+      </p>
 
         <p className="text-lg leading-relaxed mb-6">
           During my final year, I also completed an internship at the <strong>Department of Environment and Natural Resources (DENR) MIMAROPA</strong>, 
