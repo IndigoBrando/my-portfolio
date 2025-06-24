@@ -42,12 +42,12 @@ export default function Home() {
           <div className="border border-green-400 p-4 rounded-xl">
             <h3 className="text-xl font-bold">Konsultap</h3>
             <p className="text-sm mt-2">A telemedicine web app with scheduling and video consultations.</p>
-            <a href="/projects" className="text-green-300 underline mt-2 inline-block">View more</a>
+            <Link href="/projects/konsultap" className="text-green-300 underline mt-2 inline-block">View more</Link>
           </div>
           <div className="border border-green-400 p-4 rounded-xl">
             <h3 className="text-xl font-bold">Vehicle Reservation System</h3>
             <p className="text-sm mt-2">A Vehicle Reservation System that streamlines the process of car request from DENR</p>
-            <a href="/projects" className="text-green-300 underline mt-2 inline-block">View more</a>
+            <Link href="/projects/vehicle" className="text-green-300 underline mt-2 inline-block">View more</Link>
           </div>
         </div>
       </section>
