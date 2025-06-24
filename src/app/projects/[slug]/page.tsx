@@ -46,10 +46,14 @@ const projectData: Record<string, {
 
 
 export default function ProjectDetails() {
-  const params = useParams();
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
-  const project = projectData[slug];
-  const [currentImage, setCurrentImage] = useState(0);
+ const params = useParams();
+const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
+
+if (!slug || !(slug in projectData)) return notFound();
+
+const project = projectData[slug];
+const [currentImage, setCurrentImage] = useState(0);
+
 
   if (!project) return notFound();
 
