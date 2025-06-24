@@ -39,23 +39,17 @@ const projectData: Record<string, {
       '/images/vts/6.png',
       '/images/vts/7.png',
       '/images/vts/8.png'
-      
     ],
   },
 };
 
-
 export default function ProjectDetails() {
- const params = useParams();
-const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
+  const params = useParams();
+  const slug = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
+  const project = slug ? projectData[slug] : null;
+  const [currentImage, setCurrentImage] = useState(0); // ✅ Always called unconditionally
 
-if (!slug || !(slug in projectData)) return notFound();
-
-const project = slug ? projectData[slug] : null;
-const [currentImage, setCurrentImage] = useState(0);
-
-
-  if (!project) return notFound();
+  if (!slug || !project) return notFound(); // ✅ Hook already declared above
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % project.images.length);
