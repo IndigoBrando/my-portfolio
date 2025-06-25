@@ -49,7 +49,7 @@ export default function Home() {
       <section className="px-4 py-10 text-center">
         <h2 className="text-3xl font-bold mb-6">Tech Stack</h2>
         <div className="flex flex-wrap justify-center gap-4">
-          {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'MySQL', 'Laravel', 'PHP', 'Java', 'Wordpress', 'C#'].map((tech) => (
+          {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'MySQL', 'Laravel', 'PHP', 'Java', 'Wordpress', 'C#', 'JavaScript', 'HTML', 'CSS'].map((tech) => (
             <span key={tech} className="border border-green-400 px-4 py-2 rounded-md text-sm hover:bg-green-900">
               {tech}
             </span>
